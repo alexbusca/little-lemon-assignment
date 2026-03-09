@@ -1,14 +1,14 @@
 .bg-blob-yellow {
   position: absolute;
-  top: -20px;
-  left: -20px;
-  width: 150px;
-  height: 150px;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
   background-color: var(--color-primary-yellow);
   border-radius: 50%;
   z-index: 0;
-  /* Add an irregular shape slightly */
   border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  opacity: 0.5;
 }
 
 .main-header {
@@ -17,7 +17,33 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 20px 10px 20px;
+  padding: 30px 0;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-primary-green);
+  letter-spacing: 0.5px;
+}
+
+.desktop-nav {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.desktop-nav a {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-dark-gray);
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.desktop-nav a:hover {
+  color: var(--color-primary-green);
 }
 
 .icon-btn {
@@ -26,20 +52,36 @@
   align-items: center;
   justify-content: center;
   padding: 8px;
-  margin: -8px; /* Increase hit area but keep visual alignment */
 }
 
-.logo {
-  font-family: var(--font-heading);
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--color-primary-green);
-  letter-spacing: 0.5px;
+.cart-btn {
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--color-error);
+  color: white;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
 }
 
 .main-content {
   position: relative;
   z-index: 10;
-  padding: 20px;
-  padding-bottom: 40px;
+  padding: 20px 0 60px 0;
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none; /* In a real app we would add a hamburger menu again */
+  }
 }

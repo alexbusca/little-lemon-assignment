@@ -75,12 +75,13 @@ button {
 }
 
 .container {
-  max-width: 480px; /* Mobile width */
+  max-width: 1200px;
   margin: 0 auto;
   min-height: 100vh;
   background-color: var(--color-white);
   position: relative;
   overflow-x: hidden;
+  padding: 0 20px;
 }
 
 .sr-only {
