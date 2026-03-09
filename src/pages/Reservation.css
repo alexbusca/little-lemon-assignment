@@ -1,8 +1,54 @@
-.reservation-container {
+.reservation-page {
   display: flex;
   flex-direction: column;
-  gap: 48px;
-  align-items: center;
+  gap: 80px;
+}
+
+.reservation-hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  padding: 0 5%;
+}
+
+@media (min-width: 900px) {
+  .reservation-hero {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 80px;
+  }
+}
+
+.reservation-image-panel {
+  background-image: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.1)), url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&q=80&w=1200');
+  background-size: cover;
+  background-position: center;
+  border-radius: 24px;
+  min-height: 400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 60px 40px;
+  color: var(--color-white);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.reservation-image-panel h2 {
+  font-size: 48px;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  color: var(--color-primary-yellow);
+}
+
+.reservation-image-panel p {
+  font-size: 20px;
+  opacity: 0.9;
+}
+
+.reservation-form-panel {
+  display: flex;
+  justify-content: center;
 }
 
 .reservation-card {
@@ -11,8 +57,8 @@
   padding: 40px;
   color: var(--color-white);
   width: 100%;
-  max-width: 600px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  max-width: 500px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
 }
 
 .reservation-card h1 {
