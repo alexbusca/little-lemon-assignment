@@ -1,17 +1,21 @@
+.delivery-section {
+  padding: 0 5%;
+}
+
 .delivery-section h2 {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 800;
   text-transform: uppercase;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 /* Scrollable Categories */
 .categories-scroll {
   display: flex;
-  gap: 12px;
+  gap: 16px;
   overflow-x: auto;
-  padding-bottom: 8px;
-  margin-bottom: 20px;
+  padding-bottom: 12px;
+  margin-bottom: 32px;
   scrollbar-width: none; 
 }
 .categories-scroll::-webkit-scrollbar {
