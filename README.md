@@ -1,73 +1,31 @@
-# React + TypeScript + Vite
+# Little Lemon Booking Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive, mobile-first React web application for the "Little Lemon" Mediterranean restaurant. Built as an assignment to demonstrate UI/UX implementation, accessibility, semantics, forms validation, and automated testing.
 
-Currently, two official plugins are available:
+## Features Let's look at the implementation:
+- **Responsive Mobile-First Design**: Implemented matching the provided UI screenshots using a constrained 480px width auto-centered layout.
+- **Accessible Semantics**: Semantic HTML5 tags (`<header>`, `<main>`, `<section>`, `<article>`) and appropriate ARIA rules (`aria-invalid` for form elements, accessible `<form>` grouping, semantic buttons).
+- **Form Validation**: Fully validated booking form using `react-hook-form` and `zod` schema validation to ensure proper user input formats (Name, Phone length, required dates and times).
+- **Unit Testing**: Contains Vitest and React Testing Library tests testing React Router navigation and strict form validation rules on submission.
+- **Modern Tech Stack**: React 18, TypeScript, Vite, React Router DOM, Vanilla CSS variables for precise matching of design system.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Setup Instructions
 
-## React Compiler
+Ensure you have Node.js 20+ installed.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **Install dependencies:**
+    ```sh
+    npm install
+    ```
 
-## Expanding the ESLint configuration
+2. **Run the development server:**
+    ```sh
+    npm run dev
+    ```
+    Open the local address provided in your browser.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+3. **Run Unit Tests:**
+    ```sh
+    npm run test
+    ```
+    This will execute the Vitest test suite that verifies the Reservation form logic and App routing.

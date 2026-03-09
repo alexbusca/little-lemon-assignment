@@ -1,0 +1,45 @@
+.bg-blob-yellow {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 150px;
+  height: 150px;
+  background-color: var(--color-primary-yellow);
+  border-radius: 50%;
+  z-index: 0;
+  /* Add an irregular shape slightly */
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+}
+
+.main-header {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 10px 20px;
+}
+
+.icon-btn {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  margin: -8px; /* Increase hit area but keep visual alignment */
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-primary-green);
+  letter-spacing: 0.5px;
+}
+
+.main-content {
+  position: relative;
+  z-index: 10;
+  padding: 20px;
+  padding-bottom: 40px;
+}

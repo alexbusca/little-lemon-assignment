@@ -1,0 +1,153 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.hero {
+  background-color: var(--color-primary-green);
+  border-radius: 16px;
+  padding: 24px;
+  color: var(--color-white);
+}
+
+.hero h1 {
+  font-size: 32px;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  color: var(--color-white);
+}
+
+.hero p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  opacity: 0.9;
+}
+
+.hero-btn {
+  width: 100%;
+  max-width: 200px;
+}
+
+.delivery-section h2 {
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+/* Scrollable Categories */
+.categories-scroll {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 8px; /* space for scrollbar if any */
+  margin-bottom: 20px;
+  /* Hide scrollbar for a cleaner look */
+  scrollbar-width: none; 
+}
+.categories-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.category-pill {
+  white-space: nowrap;
+  padding: 8px 16px;
+  background-color: var(--color-light-gray);
+  color: var(--color-dark-gray);
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.category-pill.active {
+  background-color: #E0E8E4; /* slightly darker green-ish gray for active, or just stick to green text */
+  color: var(--color-primary-green);
+}
+
+/* Menu Cards */
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.menu-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: var(--color-white);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-decoration: none;
+}
+
+.menu-card-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+/* Gradient overlay so text is readable */
+.menu-card-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0) 100%);
+  z-index: 2;
+}
+
+.menu-card-content {
+  position: relative;
+  z-index: 3;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menu-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-card-header h3 {
+  font-size: 20px;
+  margin: 0;
+  text-transform: none;
+  font-family: var(--font-body);
+  font-weight: 700;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.menu-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.menu-card-footer p {
+  font-size: 13px;
+  opacity: 0.85;
+  line-height: 1.4;
+  flex: 1;
+  padding-right: 16px;
+  /* Truncate to 2 lines */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

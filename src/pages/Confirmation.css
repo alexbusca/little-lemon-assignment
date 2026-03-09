@@ -1,0 +1,43 @@
+.confirmation-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.success-card {
+  background-color: var(--color-primary-green);
+  border-radius: 16px;
+  padding: 40px 24px;
+  color: var(--color-white);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.success-icon-wrapper {
+  background-color: var(--color-white);
+  border-radius: 50%;
+  width: 96px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.success-icon {
+  margin-top: 4px; /* tweak vertical alignment if needed */
+}
+
+.success-card h1 {
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.success-card p {
+  font-size: 14px;
+  opacity: 0.9;
+  line-height: 1.4;
+}
